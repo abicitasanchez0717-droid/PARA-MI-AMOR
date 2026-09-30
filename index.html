@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA MI ALAN HERMOSO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="musica-fondo" src="imagenes/Murder - Noche de los Dos (Audio Oficial) - Murder.mp3"></audio>
+
+<main id="contenido-web">
+
+    <div class="night"></div>
+
+    <div class="special-text">
+        <span>FELIZ 30 DE</span>
+        <span>SEPTIEMBRE MI CHEÑOLCITO PRECIOSO, MI NIÑO HERMOSO</span>
+    </div>
+
+    <div class="decoracion">
+        <span class="brillo brillo1">✦</span>
+        <span class="brillo brillo2">✦</span>
+        <span class="brillo brillo3">✦</span>
+        <span class="brillo brillo4">✦</span>
+        <span class="brillo brillo5">✦</span>
+        <span class="brillo brillo6">✦</span>
+    </div>
+
+    <div class="ramo">
+
+        <div class="flor flor1" onclick="mostrarMensaje(1)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito1.jpg">
+        </div>
+
+        <div class="flor flor2" onclick="mostrarMensaje(2)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito2.jpg">
+        </div>
+
+        <div class="flor flor3" onclick="mostrarMensaje(3)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito3.jpg">
+        </div>
+
+        <div class="flor flor4" onclick="mostrarMensaje(4)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito4.jpg">
+        </div>
+
+        <div class="flor flor5" onclick="mostrarMensaje(5)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito5.jpg">
+        </div>
+
+        <div class="flor flor6" onclick="mostrarMensaje(6)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito6.jpg">
+        </div>
+
+        <div class="flor flor7" onclick="mostrarMensaje(7)">
+            <img class="petalos" src="imagenes/flor1.png">
+            <img class="carrito" src="imagenes/carrito7.jpg">
+        </div>
+
+        <img class="tallos-reales" src="imagenes/file_000000009e4081f58087b94e5c5aa71e.png">
+
+    </div>
+
+    <div id="mensaje" class="mensaje">
+        <div class="carta">
+            <button class="cerrar" onclick="cerrarMensaje()">×</button>
+            <div class="corazon-carta">♥</div>
+            <h2 id="titulo-mensaje"></h2>
+            <p id="texto-mensaje"></p>
+        </div>
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

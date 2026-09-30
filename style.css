@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: #031b32;
+    font-family: Arial, sans-serif;
+}
+
+.night {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("imagenes/amorcito.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -10;
+}
+
+.special-text {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: #c995ff;
+    font-size: 34px;
+    line-height: 1.35;
+    font-weight: 400;
+    z-index: 100;
+    text-shadow: 0 0 5px #8c55ff, 0 0 12px #9d5cff, 0 0 20px #6f30ff;
+}
+
+.special-text span {
+    display: block;
+}
+
+.special-text .corazon {
+    font-size: 52px;
+    line-height: 0.9;
+    margin-top: 5px;
+}
+
+.decoracion {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.brillo {
+    position: absolute;
+    color: #b678ff;
+    font-size: 25px;
+    animation: brillo 2s ease-in-out infinite;
+}
+
+.brillo1 { top: 25%; left: 12%; }
+.brillo2 { top: 30%; right: 13%; }
+.brillo3 { top: 42%; left: 7%; }
+.brillo4 { top: 45%; right: 8%; }
+.brillo5 { top: 55%; left: 15%; }
+.brillo6 { top: 58%; right: 15%; }
+
+@keyframes brillo {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.7) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(20deg);
+    }
+}
+
+.ramo {
+    position: absolute;
+    left: 50%;
+    bottom: -2%;
+    transform: translateX(-50%);
+    width: 310px;
+    height: 445px;
+    z-index: 20;
+}
+
+.flor {
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    cursor: pointer;
+    z-index: 20;
+    transition: transform 0.35s ease;
+}
+
+.petalos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.carrito {
+    position: absolute;
+    width: 73%;
+    height: 73%;
+    object-fit: contain;
+    left: 13.5%;
+    top: 13.5%;
+    z-index: 2;
+}
+
+.flor1 {
+    left: 99px;
+    top: 5px;
+    animation: flotar1 4s ease-in-out infinite;
+}
+
+.flor2 {
+    left: 24px;
+    top: 55px;
+    transform: rotate(-8deg);
+    animation: flotar2 4.5s ease-in-out infinite;
+}
+
+.flor3 {
+    right: 20px;
+    top: 55px;
+    transform: rotate(8deg);
+    animation: flotar3 4.2s ease-in-out infinite;
+}
+
+.flor4 {
+    left: 2px;
+    top: 145px;
+    transform: rotate(-13deg);
+    animation: flotar4 4.7s ease-in-out infinite;
+}
+
+.flor5 {
+    right: 0;
+    top: 150px;
+    transform: rotate(12deg);
+    animation: flotar5 4.4s ease-in-out infinite;
+}
+
+.flor6 {
+    left: 52px;
+    top: 220px;
+    transform: rotate(-7deg);
+    animation: flotar6 4.8s ease-in-out infinite;
+}
+
+.flor7 {
+    right: 45px;
+    top: 225px;
+    transform: rotate(7deg);
+    animation: flotar7 4.6s ease-in-out infinite;
+}
+
+@keyframes flotar1 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(2deg); }
+}
+
+@keyframes flotar2 {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-8px) rotate(-5deg); }
+}
+
+@keyframes flotar3 {
+    0%, 100% { transform: translateY(0) rotate(8deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+@keyframes flotar4 {
+    0%, 100% { transform: translateY(0) rotate(-13deg); }
+    50% { transform: translateY(-6px) rotate(-9deg); }
+}
+
+@keyframes flotar5 {
+    0%, 100% { transform: translateY(0) rotate(12deg); }
+    50% { transform: translateY(-7px) rotate(9deg); }
+}
+
+@keyframes flotar6 {
+    0%, 100% { transform: translateY(0) rotate(-7deg); }
+    50% { transform: translateY(-6px) rotate(-4deg); }
+}
+
+@keyframes flotar7 {
+    0%, 100% { transform: translateY(0) rotate(7deg); }
+    50% { transform: translateY(-6px) rotate(4deg); }
+}
+
+.flor:active {
+    transform: scale(1.15) translateY(-15px) !important;
+    z-index: 200;
+}
+
+.tallos-reales {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    object-fit: contain;
+    left: -30px;
+    top:  50px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hojas {
+    position: absolute;
+    width: 315px;
+    height: 150px;
+    object-fit: contain;
+    left: -3px;
+    bottom: -12px;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.mensaje {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 20, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 25px;
+}
+
+.carta {
+    position: relative;
+    width: 90%;
+    max-width: 390px;
+    padding: 35px 25px;
+    background: #fff;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 15px #a55cff, 0 0 35px #753cff;
+    animation: aparecerCarta 0.45s ease;
+}
+
+@keyframes aparecerCarta {
+    from {
+        opacity: 0;
+        transform: scale(0.5) translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.corazon-carta {
+    font-size: 55px;
+    color: #b16cff;
+    animation: latido 1s infinite;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+#titulo-mensaje {
+    color: #7442bd;
+    font-size: 27px;
+    margin: 10px 0 15px;
+}
+
+#texto-mensaje {
+    color: #333;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    border: none;
+    background: none;
+    font-size: 32px;
+    color: #7442bd;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .special-text {
+        top: 5%;
+        font-size: 31px;
+        line-height: 1.25;
+    }
+
+    .special-text .corazon {
+        font-size: 48px;
+        margin-top: 3px;
+    }
+
+    .ramo {
+        width: 310px;
+        height: 445px;
+        bottom: 0;
+    }
+
+    .flor {
+        width: 108px;
+        height: 108px;
+    }
+
+    .flor1 {
+        left: 101px;
+        top: 2px;
+    }
+
+    .flor2 {
+        left: 25px;
+        top: 54px;
+    }
+
+    .flor3 {
+        right: 21px;
+        top: 54px;
+    }
+
+    .flor4 {
+        left: 3px;
+        top: 140px;
+    }
+
+    .flor5 {
+        right: 0;
+        top: 145px;
+    }
+
+    .flor6 {
+        left: 53px;
+        top: 216px;
+    }
+
+    .flor7 {
+        right: 46px;
+        top: 221px;
+    }
+
+    .tallos-reales {
+        width: 280px;
+        height: 325px;
+        left: 15px;
+        top: 145px;
+    }
+
+    .hojas {
+        width: 315px;
+        height: 150px;
+        left: -2px;
+        bottom: -8px;
+    }
+}
